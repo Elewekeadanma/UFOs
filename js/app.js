@@ -1,3 +1,6 @@
+// import the data from data.js
+const tableData = data;
+
 function buildTable(data) {
     // First, clear out any existing data
     tbody.html("");
