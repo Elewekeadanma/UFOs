@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +10,16 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css.css">
 </head>
-<body>
+<body class="bg-light">
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
     </div>
     <div class="jumbotron">
-        <h1>The Truth Is Out There</h1>
+        <h1 class="display-4">The Truth Is Out There</h1>
       </div>
       <div class="container-fluid">
         <div class="row">
@@ -38,17 +38,57 @@
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <form>
+            <form class="bg-dark" {style="font-family: inherit; font-size: 1rem;"}>
                 <p>Filter Search</p>
-                <ul class="list-group">
-                    <li class="list-group-item">
+                <ul class="list-group" class="bg-dark" {style="font-family: inherit; font-size: 1rem;"}>
+                    <li class="list-group-item" class="bg-dark" {style="font-family: inherit; font-size: 1rem;"}>
                         <label for="date">Enter Date</label>
                         <input type="text" placeholder="1/10/2010" id="datetime" />
                         
                     </li>
                     <li class="list-group-item">
-                        <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                        <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
                     </li>
+                    <!--PLACE FOR MY CITY FILTER-->
+                    <li class = "list-group-item">
+                        <label for="City">Enter a city</label>
+                    </li>
+                      
+                    <li class = "list-group-item">  <input type="text"/>
+
+                    </li>  
+                                      
+                    <!--PLACE FOR MY STATE FILTER-->
+                    <li class = "list-group-item">
+                      <label for="State">Enter a State</label>
+                    </li>
+                    
+                    <li class = "list-group-item"> 
+                      <input type="text"/>
+                    </li>
+
+                  
+                  <!--PLACE FOR MY COUNTRY FILTER-->
+                  <li class = "list-group-item">
+                    <label for="Country">Enter a Country</label>
+                  </li>
+                  
+                  <li class="list-group-item">
+                    <input type="text"/>
+
+                  </li>
+                    
+                                                
+                  <!--PLACE FOR MY SHAPE FILTER-->
+                <li class = "list-group-item">
+                    <label for="Shape">Enter a Shape</label>
+                </li>   
+                    
+                 <li class="list-group-item">  
+                      <input type="text"/>
+
+                </li>
+                                             
                 </ul>
               </form>
           </div>
@@ -72,6 +112,6 @@
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
       <script src="js/data.js"></script>
-      <script rel="text/javascript" src="js/app.js"></script>
+      <script src="js/app.js"></script>
 </body>
 </html>
