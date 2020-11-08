@@ -3,6 +3,8 @@ const tableData = data;
 
 function buildTable(data) {
     // First, clear out any existing data
+    let tbody = d3.select('tbody');
+
     tbody.html("");
   
     // Next, loop through each object in the data
@@ -16,11 +18,16 @@ function buildTable(data) {
       Object.values(dataRow).forEach((val) => {
         let cell = row.append("td");
         cell.text(val);
-        }
+                }
       );
     });
+    // Build the table when the page loads
+ 
   }
-  function handleClick() {
+
+  buildTable(data);
+
+function handleClick() {
     // Grab the datetime value from the filter
     let date = d3.select("#datetime").property("value");
     let filteredData = tableData;
@@ -37,4 +44,10 @@ function buildTable(data) {
     // @NOTE: If no date was entered, then filteredData will
     // just be the original tableData.
     buildTable(filteredData);
-  };
+  }
+
+  // Attach an event to listen for the form button
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+
+  
