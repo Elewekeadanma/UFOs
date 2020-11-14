@@ -2,7 +2,7 @@
 ## Overview of the project
 The purpose of this project is to display information about UFO sightings that was stored in a data.js file as an interactive webpage.There will be an article title, article as well as table on the webpage. The data from the data.js will be displayed as a table and will have muliple and easy to use filters to select relevant information from the table.
 ##  Results
-I placed filters on the Date, City, State, Country and Shape fields. So when you load the webpage , all the data from the data file is displayed on the page. However if you  want to narrow down the data to display only the information for example, the date 1/4/2010 as shown below, all you need to do is to enter 1/4/2010 in the date field ,click anywhere on the page and only the dates with a value of 1/4/2010 and their corresponding data will be displayed on the table in the webpage.
+I placed filters on the Date, City, State, Country and Shape fields. So when you load the webpage , all the data from the data file will be displayed on the page. However if you  want to narrow down the data to display only the information for example, the date 1/4/2010 as shown below, all you need to do is to enter 1/4/2010 in the date field ,click anywhere on the page and only the dates with a value of 1/4/2010 and their corresponding data will be displayed on the table in the webpage.
 
 ---
 ![Search based on Date field](https://github.com/Elewekeadanma/UFOs/blob/main/images/DateFilter.png)
