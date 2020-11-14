@@ -6,7 +6,9 @@ I placed filters on the date, city, state, country and shape fields. So when you
 
 ---
 ![Search based on Date field]](https://github.com/Elewekeadanma/UFOs/blob/main/images/DateFilter.png)
+
 ---
 You can also narrow down your data based on more than one search. So you can do a search by date, City, State, Country or Shape or by a combination of any of these.
 As shown in the image below, I did a search based on the Date as well as the State fields. 
-![Search based on the Date and State fields]
+![Search based on the Date and State fields](https://github.com/Elewekeadanma/UFOs/blob/main/images/DateStateFilter.png)
+
