@@ -14,10 +14,10 @@ As shown in the image below, I did a search based on the Date as well as the Sta
 ![Search based on the Date and State fields](https://github.com/Elewekeadanma/UFOs/blob/main/images/DateStateFilter.png)
 ---
 ##  Summary
-One drawback of this new design is that you have to first look into the table to know what the data that exists in the table.
+One drawback of this new design is that you have to first look into the table to find out what information you can get out of the table.
 
 Two recommedations for further development are:
 
-- Using drop-down lists instead of text boxes. That way, a user will not need to go through the table first before making a selection and instead of having to enter data, the user will just need to select relevant information 
+- Using drop-down lists instead of text boxes. That way, a user will not need to go through the table first before making a selection and instead of having to enter data, the user will just need to select relevant information.
 - Also, it will be nice if there was a message displayed once a search has been completed.
 
