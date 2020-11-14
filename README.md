@@ -19,5 +19,5 @@ One drawback of this new design is that you have to first look into the table to
 Two recommedations for further development are:
 
 - Using drop-down lists instead of text boxes. That way, a user will not need to go through the table first before making a selection and instead of having to enter data, the user will just need to select relevant information.
-- Also, it will be nice if there was a message displayed once a search has been completed.
+- Also, it will be nice if there was a pop-up message informing the user that a search had been completed.
 
