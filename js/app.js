@@ -20,67 +20,59 @@ function buildTable(data) {
         });
     });
 }
-buildTable(tableData);
-// 1. Create a variable to keep track of all the filters as an object.
-var filterlist = document.getElementsByTagName("input");
-var filters = {}
-    // 3. Use this function to update the filters.
+// 3. Use this function to update the filters. 
 function updateFilters() {
+  let elementValue = d3.select("#datetime").property("value");
+  console.log(elementValue);
 
-    // 4a. Save the element that was changed as a variable.
-    let changetheElement = d3.select(this);
+  let cityValue = d3.select("#city").property("value");
+  console.log(cityValue);
 
-    // 4b. Save the value that was changed as a variable.
-    let elementValue = changetheElement.property("value");
-    // 4c. Save the id of the filter that was changed as a variable.
-    let filterId = changetheElement.attr("id");
+  let stateValue = d3.select("#state").property("value");
+  console.log(stateValue);
 
-    // 5. If a filter value was entered then add that filterId and value
-    // to the filters list. Otherwise, clear that filter from the filters object.
-    if (elementValue) {
-        filters[filterId] = elementValue;
-    } else {
-        delete filters[filterId];
-    }
+  let countryValue = d3.select("#country").property("value");
+  console.log(countryValue);
 
-    // 6. Call function to apply all filters and rebuild the table
-    filterTable();
+  let shapeValue = d3.select("#shape").property("value");
+  console.log(shapeValue);
 
+// 8. Set the filtered data to the tableData.
+  let filteredTable = tableData;
+// 9. Loop through all of the filters and keep any data that
+// matches the filter values
+
+if (elementValue) {
+  filteredTable= filteredTable.filter(row => row.datetime === elementValue);
 }
-// 7. Use this function to filter the table when data is entered.
-  function filterTable() {
-    var states = d3.select("#state").property("value");
-    var cities = d3.select("#city1").property("value");
-    //var countries = d3.select("#country").property("value");
-    //var shapes = d3.select("#shape1").property("value");
-    // 8. Set the filtered data to the tableData.
-    
-    // 9. Loop through all of the filters and keep any data that
-    // matches the filter values
-    filteredTable = tableData;
 
-    if (states != "") {
+if (cityValue) {
+  filteredTable= filteredTable.filter(row => row.city === cityValue);
+}
 
-        filteredTable = filteredTable.filter(d => d.state === states)
-    }
-    if (cities != "") {
-        filteredTable = filteredTable.filter(d => d.city === cities);
-    }
-    if (countries != "") {
-        filteredTable = filteredTable.filter(d => d.country === countries);
-    }
-    if (shapes != "") {
-        filteredTable = filteredTable.filter(d => d.shape === shapes);
-    }
-    return filteredTable;
+if (stateValue) {
+    filteredTable= filteredTable.filter(row => row.state === stateValue);
+}
+
+if (countryValue) {
+  filteredTable = filteredTable.filter(row => row.state === countryValue);
+}
+
+if (shapeValue) {
+  filteredTable = filteredTable.filter(row => row.shape ===shapeValue);
 }
 
 buildTable(filteredTable);
+}
+
+
+
 
 
 // 2. Attach an event to listen for changes to each filter
-d3.select("#state").on("change", filterTable);
-d3.select("#city1").on("change", filterTable);
+d3.selectAll("input").on("change", updateFilters);
+
+
 
 
 // Build the table when the page loads
